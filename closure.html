@@ -1,0 +1,12 @@
+<script>
+  const outer = () => {
+    let a = "outer function variable";
+    const inner = () => {
+      console.log(a);
+    };
+    return inner;
+  };
+
+  const test = outer();
+  test();
+</script>
