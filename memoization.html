@@ -1,0 +1,17 @@
+<script>
+  const cache = {};
+
+  const squareOfNum = (n) => {
+    return n * n;
+  };
+  const memoization = (n) => {
+    if (cache[n] !== undefined) {
+      return cache[n];
+    }
+    cache[n] = squareOfNum(n);
+    return cache[n];
+  };
+
+  console.log(memoization(4));
+  console.log(memoization(4));
+</script>
