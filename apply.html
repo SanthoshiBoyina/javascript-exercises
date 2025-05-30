@@ -1,0 +1,10 @@
+<script>
+  let emp1 = { firstName: "John", lastName: "jones" };
+  function invite(greeting1, greeting2) {
+    console.log(
+      greeting1 + " " + this.firstName + " " + this.lastName + " " + greeting2
+    );
+  }
+
+  invite.apply(emp1, ["Hello", "How are you?"]);
+</script>
