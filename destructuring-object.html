@@ -1,0 +1,15 @@
+<script>
+  let obj = { x: 2, y: 7, z: 4 };
+  const { x: a, y: b, z: c } = obj;
+  console.log(a, b, c);
+
+  // nested desturucting
+  const forecast = {
+    today: { min: 20, max: 50 },
+    tomorrow: { min: 10, max: 60 },
+  };
+  const {
+    today: { min: res },
+  } = forecast;
+  console.log(res);
+</script>
