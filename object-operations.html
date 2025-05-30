@@ -1,0 +1,36 @@
+<script>
+  // create an object
+  let obj = {
+    name: "Raju",
+    age: 23,
+    "the drink": "water",
+    country: "india",
+  };
+  console.log(obj);
+
+  // accessing an object
+  console.log(obj["the drink"]);
+  console.log(obj.age);
+
+  // deleting an property
+  delete obj["the drink"];
+  console.log(obj);
+
+  // check if an key exists
+  if ("age" in obj && obj["age"] !== undefined && obj.hasOwnProperty("age"))
+    console.log("age present in obj");
+
+  // define multiple properties in an object
+  Object.defineProperties(obj, {
+    cusine: { value: "Indian", writable: true },
+    language: { value: "telugu" },
+  });
+  obj.cusine = "french";
+  console.log(obj);
+
+  // list all properties
+  console.log(Object.getOwnPropertyNames(obj));
+
+  // List all property descriptors
+  console.log(Object.getOwnPropertyDescriptors(obj));
+</script>
