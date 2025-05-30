@@ -1,9 +1,13 @@
 <script>
+  // destructuring array
   const arr = [1, 2, 3, 4];
   const [a, b] = arr;
+
+  // skipping an element
   const [c, , d] = arr;
   console.log(a, b, c, d);
 
+  // rest operator
   const [e, ...res] = arr;
   console.log(e, res);
 </script>
