@@ -1,0 +1,17 @@
+<script>
+  const original = {
+    city: "New york",
+    properties: {
+      people: 1000,
+      language: "english",
+    },
+  };
+  const deepCopy = JSON.parse(JSON.stringify(original));
+  deepCopy.city = "india";
+  console.log(original);
+  console.log(deepCopy);
+
+  deepCopy.properties.language = "french";
+  console.log(original);
+  console.log(deepCopy);
+</script>
