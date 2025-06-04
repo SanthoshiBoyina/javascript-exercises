@@ -1,0 +1,12 @@
+<script>
+  const checkEven = new Promise((resolve, reject) => {
+    let num = 3;
+    if (num % 2 === 0) {
+      resolve("Number is even");
+    } else {
+      reject("Number is odd");
+    }
+  });
+
+  checkEven.then((msg) => console.log(msg)).catch((err) => console.log(err));
+</script>
